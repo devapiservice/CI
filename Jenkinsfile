@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Tomcat') {
             steps {
-               echo 'Hello World!'
+               sh 'docker --version'
             }
         }
     }
