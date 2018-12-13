@@ -1,17 +1,12 @@
-#!groovy
-
 pipeline {
-  agent none
-  stages {
-    stage('Tomcat Install') {
-      agent {
-        docker {
-          image 'tomcat'
+    agent {
+        docker { image 'tomcat' }
+    }
+    stages {
+        stage('Tomcat') {
+            steps {
+                sh 'node --version'
+            }
         }
-      }
-      steps {
-        sh 'tomcat clean install'
-      }
-    } 
-  }
+    }
 }
