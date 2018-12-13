@@ -1,11 +1,10 @@
 pipeline {
-    agent {
-        docker { image 'tomcat' }
-    }
+    agent { dockerfile true }
     stages {
         stage('Tomcat') {
             steps {
-                sh '--version'
+                sh 'node --version'
+                sh 'svn --version'
             }
         }
     }
