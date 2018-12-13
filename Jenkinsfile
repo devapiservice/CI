@@ -9,9 +9,6 @@ pipeline {
           image 'tomcat'
         }
       }
-      steps {
-        sh 'mvn clean install'
-      }
     } 
   }
 }
