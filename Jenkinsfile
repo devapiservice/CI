@@ -9,6 +9,9 @@ pipeline {
           image 'tomcat'
         }
       }
+      steps {
+        sh 'tomcat clean install'
+      }
     } 
   }
 }
