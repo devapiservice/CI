@@ -3,8 +3,7 @@ pipeline {
     stages {
         stage('Tomcat') {
             steps {
-                sh 'node --version'
-                sh 'svn --version'
+               echo 'Hello World!'
             }
         }
     }
